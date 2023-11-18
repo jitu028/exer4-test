@@ -37,7 +37,7 @@ jobs:
    needs: build
    environment:
      name: production
-     url: jitu028.surge.sh
+     url: http://jitu028.surge.sh
    steps:
    - name: Download the Build Artifact
      uses: actions/download-artifact@v3.0.0
