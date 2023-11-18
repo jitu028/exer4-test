@@ -37,14 +37,14 @@ jobs:
    needs: build
    environment:
      name: production
-     url: http://jitu028.surge.sh
+     url: http://periodic-parent.surge.sh
    steps:
    - name: Download the Build Artifact
      uses: actions/download-artifact@v3.0.0
      with:
       name: build
    - name: deploy to surge
-     run: npx surge –project ‘.’ –domain jitu028.surge.sh
+     run: npx surge –project ‘.’ –domain periodic-parent.surge.sh
      env:
       SURGE_LOGIN: ${{ secrets.SURGE_LOGIN }}
       SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
